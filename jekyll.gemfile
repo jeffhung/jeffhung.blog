@@ -1,0 +1,21 @@
+# Gemfile for bootstrapping
+
+source 'https://rubygems.org'
+ruby RUBY_VERSION
+
+# nokogiri is required by github-pages, but:
+# - It needs ruby > 2.1 since 1.7.0.
+# - The 1.6.7.2 version is the highest stable version on Mac with ruby 2.0
+gem 'nokogiri', '= 1.6.7.2'
+
+require 'json'
+require 'open-uri'
+versions = JSON.parse(open('https://pages.github.com/versions.json').read)
+gem 'github-pages', versions['github-pages'], group: :jekyll_plugins
+
+## As of Jekyll 3.2, the default Jekyll site contains a Gemfile that locks
+## Jekyll to the Gem version you build it with.
+#gem 'jekyll', '< 3.2.0'
+#gem 'jekyll',       versions['jekyll']
+#gem 'github-pages', group: :jekyll_plugins
+
