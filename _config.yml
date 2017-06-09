@@ -33,6 +33,7 @@ gems:
   - jekyll-feed
   - jekyll-default-layout
   - jekyll-titles-from-headings
+  - jekyll-optional-front-matter
 exclude:
   - Gemfile
   - Gemfile.lock
