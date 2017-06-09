@@ -38,3 +38,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - GNUmakefile
+  - jekyll.make
+  - jekyll.gemfile
+  - CNAME
+
